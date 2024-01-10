@@ -1,0 +1,196 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: bff
+  cloud:
+    openfeign:
+      client:
+        config:
+          default:
+            connectTimeout: 5000
+            readTimeout: 5000
+            loggerLevel: none
+          knfResourceClient:
+            url: http://localhost:9001
+          processManagerResourceClient:
+            url: http://localhost:9002
+          reportResourceClient:
+            url: http://localhost:9003
+
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: ${keycloak.integration.url}/realms/rbi
+  datasource:
+    url: jdbc:postgresql://localhost/rbi
+    username: rbi
+    password: 123ewqasd
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        default_schema: mediator
+        format_sql: true
+        show_sql: false
+        use_sql_comments: true
+        enable_lazy_load_no_trans: true
+    show-sql: false
+    hibernate:
+      ddl-auto: none
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+    placeholder-prefix: "$${"
+    placeholder-suffix: "}"
+    outOfOrder: true
+    schemas: mediator
+    locations: classpath:db/migration/postgres, classpath:db/testdata/postgres
+    ignore-migration-patterns: "*:missing"
+  mvc:
+    format:
+      date-time: iso
+      date: iso
+  cache:
+    type: caffeine
+    caffeine:
+      spec: initialCapacity=10,maximumSize=50,expireAfterAccess=300s
+
+logging:
+  pattern:
+    level: "%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]"
+  level:
+    com.ey.mediator.camunda.client: WARN
+    com.ey.mediator.knfconnector.client: WARN
+    com:
+      ey:
+        mediator:
+          service:
+            importer: INFO
+      github:
+        benmanes:
+          caffeine:
+            cache: INFO
+    org:
+      hibernate:
+        orm:
+          jdbc:
+            bind: WARN
+      springframework:
+        security: WARN
+        cache: WARN
+        hibernate: WARN
+      zalando:
+        logbook: TRACE
+
+
+application:
+  interceptor:
+    excludePathPatterns: /v3/api-docs/**,/swagger-ui/**,/swagger-resources/**,/swagger-ui.html,/webjars/swagger-ui,/actuator/health/**,/favicon.ico,/actuator/prometheus/**,/error,/info/version
+    api-key: B#y*(t@89)2Eb98*y!te(!90)
+    api-key-header: X-API-KEY
+  cron:
+    attachmentProcess: "0 0 6/12 * * *"
+    synchronize-knf-mediators: "0 0/10 * * * *"
+    updateKeycloakUsers: "0 0 0 * * *"
+    updateAttorneys: "0 0 0 * * *"
+    update-cases-in-knf: "0 0 1 * * *"
+    reset-case-seq: "0 0 0 * * *"
+  attachmentPath:
+    upload: f:/upload-files
+    incomingOnePagers: f:/incoming-onePagers
+    incomingAttachments: f:/incoming-attachments
+    archive: f:/archive-files
+  attachments:
+    max-file-size-bytes: 26214400 #25MB
+    max-file-count: 30
+    extensions: pdf,docx,doc,xlsx,xls
+  label:
+    caseStageGroupLabelMap:
+      NOWA: OPERACJE_1
+      W_ANALIZIE: ANALITYCY
+      PO_DECYZJI: OPERACJE_2
+      DO_KONTAKTU_Z_KLIENTEM: CONTACT_CENTER
+      OCZEKUJE_NA_UMOWE_MEDIACYJNA: CONTACT_CENTER
+      ZAREJESTROWANA_W_KNF: OPERACJE_1
+      OCZEKUJE_NA_MEDIACJE_KALKULACJA: OPERACJE_2
+      OCZEKUJE_NA_MEDIACJE_DOKUMENTACJA: OPERACJE_1
+      OCZEKUJE_NA_MEDIACJE: PELNOMOCNICY
+      MEDIACJE: PELNOMOCNICY
+      DECYZJA_NEGOCJACYJNA_RBI: SUPERUSERZY
+      OCZEKUJE_NA_KOLEJNE_SPOTKANIE: PELNOMOCNICY
+      PRZYGOTOWYWANIE_UGODY_REKALKULACJA: OPERACJE_2
+      PRZYGOTOWYWANIE_UGODY: OPERACJE_1
+      DOKUMENTY_WYSLANE: OPERACJE_1
+      DOKUMENTY_OTRZYMANE: OPERACJE_1
+      DOKUMENTY_NIEKOMPLETNE: OPERACJE_1
+      DOKUMENTY_OTRZYMANE_KOMPLETNE: OPERACJE_1
+      DOKUMENTY_OTRZYMANE_DO_REKALKULACJI: OPERACJE_2
+      OCZEKUJE_NA_REALIZACJE: OPERACJE_1
+
+mediator:
+  knf:
+    court-mediator-id: "1"
+
+keycloak:
+  enabled: true
+  client-id: rbi
+  realm: rbi
+  integration:
+    url: http://localhost:9000
+    publicClientId: rbi
+    backendClientId: rbi-backend
+    backendClientSecret: 6shitb1QP9jAbwyhtEHKQmo3OJ9svRN6
+    realm-name: rbi
+  api:
+    access-token-uri: ${keycloak.integration.url}/realms/${keycloak.integration.realm-name}/protocol/openid-connect/token
+    fetch-users-uri: ${keycloak.integration.url}/admin/realms/${keycloak.integration.realm-name}/users
+    fetch-groups-uri: ${keycloak.integration.url}/admin/realms/${keycloak.integration.realm-name}/groups
+    fetch--members-group-uri: ${keycloak.integration.url}/admin/realms/${keycloak.integration.realm-name}/groups/%s/members
+web:
+  cors:
+    enabled: true
+    allowedHeaders: '*'
+    allowedOrigins: '*'
+    allowedMethods: '*'
+
+camunda:
+  processKey: MediatorProcess
+
+bank:
+  nazwa: RAIFFEISEN BANK INTERNATIONAL AG
+  krs: 0000753494
+  adres:
+    kod: 03-736
+    kraj: Polska
+    miejscowosc: Warszawa
+    ulica: PLAC KONESERA
+    nrBudynku: 8
+
+management:
+  endpoint:
+    prometheus:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: 'health,prometheus'
+
+logbook:
+  sdc:
+    log-to-console: false
+  enabled: false
+  predicate:
+    include:
+      - path: /**
+    exclude:
+      - path: /actuator/health
+  strategy: body-only-if-status-at-least
+  minimum-status: 400
+  obfuscate:
+    headers:
+      - Authorization
+      - X-API-KEY
+    json-body-fields: #TODO obfuscate sensitive data

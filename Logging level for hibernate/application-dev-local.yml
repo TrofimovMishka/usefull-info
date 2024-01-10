@@ -1,0 +1,36 @@
+server:
+  port: 8080
+
+spring:
+  flyway:
+    locations: classpath:db/migration/postgres, classpath:db/testdata/postgres
+  jpa:
+    properties:
+      hibernate:
+        show_sql: true
+
+logging:
+  pattern:
+    level: "%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]"
+  level:
+    com.ey.mediator.camunda.client: DEBUG
+    com.ey.mediator.knfconnector.client: DEBUG
+    org:
+      springframework:
+        security: DEBUG
+        cache: DEBUG
+      zalando:
+        logbook: DEBUG
+      hibernate:
+        orm:
+          jdbc:
+            bind: TRACE
+application:
+  cron:
+    cacheEvict: "0 0 0 1/2 * *"
+    attachmentProcess: "0 0 6/12 * * *"
+    synchronize-knf-mediators: "0 0 0 * * *"
+    updateKeycloakUsers: "0 0 0 * * *"
+    updateAttorneys: "0 0 0 * * *"
+    update-cases-in-knf: "0 0 0 * * *"
+    reset-case-seq: "0 0 0 * * *"
