@@ -1,0 +1,14 @@
+  # For runs only once:
+  rbi-chf-version-updater:
+    image: registry-medi-dev.rbipl.raiffeisen.pl:5000/version-updater:1.0.1
+    command: "1.6.0"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://rbi_postgres-mediator/rbi_chf?ApplicationName=rbi-chf
+      - SPRING_CONFIG_ADDITIONAL-LOCATION=/run/secrets/rbi_db_secrets.yaml
+    restart: on-failure:1
+    deploy:
+      replicas: 1
+    networks:
+      - mediator_default
+    secrets:
+      - rbi_db_secrets.yaml
