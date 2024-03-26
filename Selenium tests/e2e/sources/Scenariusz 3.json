@@ -1,0 +1,884 @@
+{
+    "title": "Scenariusz 3",
+    "steps": [
+        {
+            "type": "setViewport",
+            "width": 1459,
+            "height": 1364,
+            "deviceScaleFactor": 1,
+            "isMobile": false,
+            "hasTouch": false,
+            "isLandscape": false
+        },
+        {
+            "type": "navigate",
+            "url": "https://mediator.eydev.net/sso/realms/rbi/protocol/openid-connect/auth?client_id=rbi&redirect_uri=https%3A%2F%2Fmediator.eydev.net%2F&state=d1368d7a-262f-44a4-9144-d93ffedcc4f3&response_mode=fragment&response_type=code&scope=openid&nonce=c8db80d8-78b9-4672-828f-e1d93b082832",
+            "assertedEvents": [
+                {
+                    "type": "navigation",
+                    "url": "https://mediator.eydev.net/sso/realms/rbi/protocol/openid-connect/auth?client_id=rbi&redirect_uri=https%3A%2F%2Fmediator.eydev.net%2F&state=d1368d7a-262f-44a4-9144-d93ffedcc4f3&response_mode=fragment&response_type=code&scope=openid&nonce=c8db80d8-78b9-4672-828f-e1d93b082832",
+                    "title": "Zaloguj się do rbi"
+                }
+            ]
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#username"
+                ],
+                [
+                    "xpath///*[@id=\"username\"]"
+                ]
+            ],
+            "offsetY": 35.203125,
+            "offsetX": 228.5
+        },
+        {
+            "type": "change",
+            "value": "john_senior_std_user_operacje",
+            "selectors": [
+                [
+                    "#username"
+                ],
+                [
+                    "xpath///*[@id=\"username\"]"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#password"
+                ],
+                [
+                    "xpath///*[@id=\"password\"]"
+                ]
+            ],
+            "offsetY": 16.203125,
+            "offsetX": 178.5
+        },
+        {
+            "type": "change",
+            "value": "test",
+            "selectors": [
+                [
+                    "#password"
+                ],
+                [
+                    "xpath///*[@id=\"password\"]"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#kc-login"
+                ],
+                [
+                    "xpath///*[@id=\"kc-login\"]"
+                ]
+            ],
+            "offsetY": 16.203125,
+            "offsetX": 52.5,
+            "assertedEvents": [
+                {
+                    "type": "navigation",
+                    "url": "https://mediator.eydev.net/#state=d1368d7a-262f-44a4-9144-d93ffedcc4f3&session_state=38f0dc5c-1d9d-4b85-b01a-7762634fb7dc&code=ccc8ffef-948f-410f-b905-1225a9c7b273.38f0dc5c-1d9d-4b85-b01a-7762634fb7dc.811c53fa-d034-486a-bb8e-3f0fe041832d",
+                    "title": "EY Mediator"
+                }
+            ]
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "button.ey-mediator-case-list__header-button--icon > span"
+                ],
+                [
+                    "xpath//html/body/ey-mediator-gui-root/ey-mediator-shell-route/ey-mediator-shell-component/div/div/ey-mediator-cases-route/ey-mediator-case-list/div/div[1]/button[1]/span"
+                ]
+            ],
+            "offsetY": 7,
+            "offsetX": 10
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "button.mx-2"
+                ],
+                [
+                    "xpath///*[@id=\"mat-mdc-dialog-0\"]/div/div/ey-mediator-filters/div/mat-dialog-actions/button[1]"
+                ]
+            ],
+            "offsetY": 21,
+            "offsetX": 42.28125
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "tr:nth-of-type(1) > td.cdk-column-przypisanyUzytkownik > div"
+                ],
+                [
+                    "xpath//html/body/ey-mediator-gui-root/ey-mediator-shell-route/ey-mediator-shell-component/div/div/ey-mediator-cases-route/ey-mediator-case-list/div/div[2]/div[1]/table/tbody/tr[1]/td[2]/div"
+                ]
+            ],
+            "offsetY": 8.5,
+            "offsetX": 146.265625
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "div.ey-mediator-form__container > div:nth-of-type(1) > div:nth-of-type(1) div.mat-mdc-form-field-infix"
+                ],
+                [
+                    "xpath//html/body/ey-mediator-gui-root/ey-mediator-shell-route/ey-mediator-shell-component/div/div/ey-mediator-rbi-operations/ey-mediator-case-data/div/form/div/div/div[1]/div[1]/div[1]/mat-form-field/div[1]/div/div[2]"
+                ]
+            ],
+            "offsetY": 43.609375,
+            "offsetX": 295
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#mat-option-92 > span"
+                ],
+                [
+                    "xpath///*[@id=\"mat-option-92\"]/span"
+                ]
+            ],
+            "offsetY": 19.609375,
+            "offsetX": 271
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "div.ey-mediator-form__container span.mdc-button__label"
+                ],
+                [
+                    "xpath//html/body/ey-mediator-gui-root/ey-mediator-shell-route/ey-mediator-shell-component/div/div/ey-mediator-rbi-operations/ey-mediator-case-data/div/form/div/div/div[1]/button/span[2]"
+                ]
+            ],
+            "offsetY": 13.609375,
+            "offsetX": 36
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "ey-mediator-client-data div.ey-mediator-form__header > button"
+                ],
+                [
+                    "xpath//html/body/ey-mediator-gui-root/ey-mediator-shell-route/ey-mediator-shell-component/div/div/ey-mediator-rbi-operations/ey-mediator-case-data/div/form/ey-mediator-client-data/div/div[1]/button"
+                ]
+            ],
+            "offsetY": 18.8125,
+            "offsetX": 25.46875
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "div.ey-mediator-client-data__container > div > div:nth-of-type(1) ey-mediator-knf-address-data form > div:nth-of-type(1) > div:nth-of-type(2) div.mat-mdc-form-field-infix"
+                ],
+                [
+                    "xpath//html/body/ey-mediator-gui-root/ey-mediator-shell-route/ey-mediator-shell-component/div/div/ey-mediator-rbi-operations/ey-mediator-case-data/div/form/ey-mediator-client-data/div/div[2]/div/div[1]/div[2]/ey-mediator-client/div/div/div/div[1]/ey-mediator-knf-address-data/div/form/div[1]/div[2]/mat-form-field/div[1]/div/div[2]"
+                ]
+            ],
+            "offsetY": 12.625,
+            "offsetX": 135.0625
+        },
+        {
+            "type": "change",
+            "value": "1",
+            "selectors": [
+                [
+                    "#mat-input-34"
+                ],
+                [
+                    "xpath///*[@id=\"mat-input-34\"]"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "div.ey-mediator-client-data__container > div > div:nth-of-type(1) form:nth-of-type(2) > button"
+                ],
+                [
+                    "xpath//html/body/ey-mediator-gui-root/ey-mediator-shell-route/ey-mediator-shell-component/div/div/ey-mediator-rbi-operations/ey-mediator-case-data/div/form/ey-mediator-client-data/div/div[2]/div/div[1]/div[2]/ey-mediator-client/div/div/div/div[1]/form[2]/button"
+                ]
+            ],
+            "offsetY": 25.625,
+            "offsetX": 112
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "div.ey-mediator-client-data__container > div > div:nth-of-type(2) button.ey-mediator-form__subheader-toggle"
+                ],
+                [
+                    "xpath//html/body/ey-mediator-gui-root/ey-mediator-shell-route/ey-mediator-shell-component/div/div/ey-mediator-rbi-operations/ey-mediator-case-data/div/form/ey-mediator-client-data/div/div[2]/div/div[2]/div[1]/div/button[1]"
+                ]
+            ],
+            "offsetY": 14.625,
+            "offsetX": 29.46875
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "div.ey-mediator-client-data__container > div > div:nth-of-type(2) ey-mediator-knf-address-data form > div:nth-of-type(1) > div:nth-of-type(2) div.mat-mdc-form-field-infix"
+                ],
+                [
+                    "xpath//html/body/ey-mediator-gui-root/ey-mediator-shell-route/ey-mediator-shell-component/div/div/ey-mediator-rbi-operations/ey-mediator-case-data/div/form/ey-mediator-client-data/div/div[2]/div/div[2]/div[2]/ey-mediator-client/div/div/div/div[1]/ey-mediator-knf-address-data/div/form/div[1]/div[2]/mat-form-field/div[1]/div/div[2]"
+                ]
+            ],
+            "offsetY": 40.234375,
+            "offsetX": 109.0625
+        },
+        {
+            "type": "change",
+            "value": "1",
+            "selectors": [
+                [
+                    "#mat-input-63"
+                ],
+                [
+                    "xpath///*[@id=\"mat-input-63\"]"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "div.ey-mediator-client-data__container > div > div:nth-of-type(2) div.ey-mediator-form__container"
+                ],
+                [
+                    "xpath//html/body/ey-mediator-gui-root/ey-mediator-shell-route/ey-mediator-shell-component/div/div/ey-mediator-rbi-operations/ey-mediator-case-data/div/form/ey-mediator-client-data/div/div[2]/div/div[2]/div[2]/ey-mediator-client/div/div/div/div[1]"
+                ]
+            ],
+            "offsetY": 1440.625,
+            "offsetX": 121
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "div.ey-mediator-client-data__container > div > div:nth-of-type(2) form:nth-of-type(2) > button"
+                ],
+                [
+                    "xpath//html/body/ey-mediator-gui-root/ey-mediator-shell-route/ey-mediator-shell-component/div/div/ey-mediator-rbi-operations/ey-mediator-case-data/div/form/ey-mediator-client-data/div/div[2]/div/div[2]/div[2]/ey-mediator-client/div/div/div/div[1]/form[2]/button"
+                ]
+            ],
+            "offsetY": 23.234375,
+            "offsetX": 106
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "ey-mediator-case-data > div > div button.ey-mediator-process-management-toolbar__next-button > span.mdc-button__label"
+                ],
+                [
+                    "xpath//html/body/ey-mediator-gui-root/ey-mediator-shell-route/ey-mediator-shell-component/div/div/ey-mediator-rbi-operations/ey-mediator-case-data/div/div/div/ey-mediator-process-management-toolbar/div/button[2]/span[2]"
+                ]
+            ],
+            "offsetY": 11,
+            "offsetX": 19.71875
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "div.cdk-overlay-container button:nth-of-type(2) > span.mat-mdc-button-touch-target"
+                ],
+                [
+                    "xpath///*[@id=\"mat-mdc-dialog-1\"]/div/div/ey-mediator-process-step-confirmation-dialog/div/mat-dialog-actions/button[2]/span[4]"
+                ]
+            ],
+            "offsetY": 9.5,
+            "offsetX": 42.515625
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "div.cdk-overlay-container span.mdc-button__label"
+                ],
+                [
+                    "xpath///*[@id=\"mat-mdc-dialog-2\"]/div/div/ey-mediator-user-assignee-alert-dialog/div/mat-dialog-actions/button/span[2]"
+                ]
+            ],
+            "offsetY": 8,
+            "offsetX": 21.515625
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "ey-mediator-header span.mat-mdc-button-touch-target"
+                ],
+                [
+                    "xpath//html/body/ey-mediator-gui-root/ey-mediator-shell-route/ey-mediator-shell-component/div/ey-mediator-header/div/div[3]/button/span[3]"
+                ]
+            ],
+            "offsetY": 24,
+            "offsetX": 29
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "div.cdk-overlay-container button:nth-of-type(2)"
+                ],
+                [
+                    "xpath///*[@id=\"mat-menu-panel-0\"]/div/button[2]"
+                ]
+            ],
+            "offsetY": 40,
+            "offsetX": 71.671875
+        },
+        {
+            "type": "keyDown",
+            "target": "main",
+            "key": "Alt",
+            "assertedEvents": [
+                {
+                    "type": "navigation",
+                    "url": "https://mediator.eydev.net/",
+                    "title": "EY Mediator"
+                }
+            ]
+        },
+        {
+            "type": "keyDown",
+            "target": "main",
+            "key": "Control"
+        },
+        {
+            "type": "keyUp",
+            "key": "Control",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "john_senior_std_user_analityk_kredytowy",
+            "selectors": [
+                [
+                    "#username"
+                ],
+                [
+                    "xpath///*[@id=\"username\"]"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#password"
+                ],
+                [
+                    "xpath///*[@id=\"password\"]"
+                ]
+            ],
+            "offsetY": 41.203125,
+            "offsetX": 129.5
+        },
+        {
+            "type": "change",
+            "value": "test",
+            "selectors": [
+                [
+                    "#password"
+                ],
+                [
+                    "xpath///*[@id=\"password\"]"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#kc-login"
+                ],
+                [
+                    "xpath///*[@id=\"kc-login\"]"
+                ]
+            ],
+            "offsetY": 31.203125,
+            "offsetX": 38.5,
+            "assertedEvents": [
+                {
+                    "type": "navigation",
+                    "url": "https://mediator.eydev.net/#state=ed2efea5-daf8-473f-845c-f81bc2d5f44c&session_state=3d28658e-1c3a-4794-b56e-ed27c4c6d397&code=0563f340-ca23-4715-9b4f-e91cc54d7f7d.3d28658e-1c3a-4794-b56e-ed27c4c6d397.811c53fa-d034-486a-bb8e-3f0fe041832d",
+                    "title": "EY Mediator"
+                }
+            ]
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "button.ey-mediator-case-list__header-button--icon"
+                ],
+                [
+                    "xpath//html/body/ey-mediator-gui-root/ey-mediator-shell-route/ey-mediator-shell-component/div/div/ey-mediator-cases-route/ey-mediator-case-list/div/div[1]/button[1]"
+                ]
+            ],
+            "offsetY": 33,
+            "offsetX": 20
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "button:nth-of-type(9)"
+                ],
+                [
+                    "xpath///*[@id=\"mat-mdc-dialog-0\"]/div/div/ey-mediator-filters/div/mat-dialog-content/form/div[1]/button[9]"
+                ]
+            ],
+            "offsetY": 17.5,
+            "offsetX": 120.09375
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "div.cdk-overlay-container div.mat-mdc-form-field-infix"
+                ],
+                [
+                    "xpath///*[@id=\"mat-mdc-dialog-0\"]/div/div/ey-mediator-filters/div/mat-dialog-content/form/div[2]/div/div/div/mat-form-field/div[1]/div/div[2]"
+                ]
+            ],
+            "offsetY": 40.5,
+            "offsetX": 103.09375
+        },
+        {
+            "type": "change",
+            "value": "02191",
+            "selectors": [
+                [
+                    "#mat-input-0"
+                ],
+                [
+                    "xpath///*[@id=\"mat-input-0\"]"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "button.mx-2"
+                ],
+                [
+                    "xpath///*[@id=\"mat-mdc-dialog-0\"]/div/div/ey-mediator-filters/div/mat-dialog-actions/button[1]"
+                ]
+            ],
+            "offsetY": 8,
+            "offsetX": 38.28125
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "td.cdk-column-przypisanyUzytkownik > div"
+                ],
+                [
+                    "xpath//html/body/ey-mediator-gui-root/ey-mediator-shell-route/ey-mediator-shell-component/div/div/ey-mediator-cases-route/ey-mediator-case-list/div/div[2]/div[1]/table/tbody/tr/td[2]/div"
+                ]
+            ],
+            "offsetY": 6.5,
+            "offsetX": 69.265625
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "form > ey-mediator-credit-decision form > div:nth-of-type(1) > div:nth-of-type(1) div.mat-mdc-form-field-infix"
+                ],
+                [
+                    "xpath//html/body/ey-mediator-gui-root/ey-mediator-shell-route/ey-mediator-shell-component/div/div/ey-mediator-credit-decision/ey-mediator-case-data/div/form/ey-mediator-credit-decision/div[1]/div[1]/div[2]/form/div[1]/div[1]/mat-form-field/div[1]/div/div[2]"
+                ]
+            ],
+            "offsetY": 45.40625,
+            "offsetX": 317
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#mat-option-108 > span"
+                ],
+                [
+                    "xpath///*[@id=\"mat-option-108\"]/span"
+                ]
+            ],
+            "offsetY": 28.40625,
+            "offsetX": 262
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "div.w-75 button:nth-of-type(2)"
+                ],
+                [
+                    "xpath//html/body/ey-mediator-gui-root/ey-mediator-shell-route/ey-mediator-shell-component/div/div/ey-mediator-credit-decision/ey-mediator-case-data/div/form/ey-mediator-credit-decision/div[1]/div[1]/div[2]/button[2]"
+                ]
+            ],
+            "offsetY": 7.40625,
+            "offsetX": 48
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "div.cdk-overlay-container > div:nth-of-type(2) span.mdc-button__label"
+                ],
+                [
+                    "xpath///*[@id=\"mat-mdc-dialog-1\"]/div/div/ey-mediator-user-assignee-alert-dialog/div/mat-dialog-actions/button/span[2]"
+                ]
+            ],
+            "offsetY": 16,
+            "offsetX": 15.515625
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "ey-mediator-header span.mat-mdc-button-touch-target"
+                ],
+                [
+                    "xpath//html/body/ey-mediator-gui-root/ey-mediator-shell-route/ey-mediator-shell-component/div/ey-mediator-header/div/div[3]/button/span[3]"
+                ]
+            ],
+            "offsetY": 28,
+            "offsetX": 28
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "div.cdk-overlay-container button:nth-of-type(2)"
+                ],
+                [
+                    "xpath///*[@id=\"mat-menu-panel-0\"]/div/button[2]"
+                ]
+            ],
+            "offsetY": 10,
+            "offsetX": 90.671875
+        },
+        {
+            "type": "change",
+            "value": "john_junior_std_user_analityk_kredytowy",
+            "selectors": [
+                [
+                    "#username"
+                ],
+                [
+                    "xpath///*[@id=\"username\"]"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#password"
+                ],
+                [
+                    "xpath///*[@id=\"password\"]"
+                ]
+            ],
+            "offsetY": 28.203125,
+            "offsetX": 166.5
+        },
+        {
+            "type": "change",
+            "value": "test",
+            "selectors": [
+                [
+                    "#password"
+                ],
+                [
+                    "xpath///*[@id=\"password\"]"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#kc-login"
+                ],
+                [
+                    "xpath///*[@id=\"kc-login\"]"
+                ]
+            ],
+            "offsetY": 26.203125,
+            "offsetX": 34.5,
+            "assertedEvents": [
+                {
+                    "type": "navigation",
+                    "url": "https://mediator.eydev.net/#state=b79a480d-f7e1-4b4c-8b15-7f71dd18f675&session_state=d8c6a6c8-20e5-49b5-817a-51f07611306f&code=f2b12a18-5e97-4729-bf38-aeeaeb04cb1e.d8c6a6c8-20e5-49b5-817a-51f07611306f.811c53fa-d034-486a-bb8e-3f0fe041832d",
+                    "title": "EY Mediator"
+                }
+            ]
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "button.ey-mediator-case-list__header-button--icon"
+                ],
+                [
+                    "xpath//html/body/ey-mediator-gui-root/ey-mediator-shell-route/ey-mediator-shell-component/div/div/ey-mediator-cases-route/ey-mediator-case-list/div/div[1]/button[1]"
+                ]
+            ],
+            "offsetY": 32,
+            "offsetX": 31
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "button:nth-of-type(9)"
+                ],
+                [
+                    "xpath///*[@id=\"mat-mdc-dialog-0\"]/div/div/ey-mediator-filters/div/mat-dialog-content/form/div[1]/button[9]"
+                ]
+            ],
+            "offsetY": 20.5,
+            "offsetX": 97.09375
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "div.cdk-overlay-container mat-label"
+                ],
+                [
+                    "xpath///*[@id=\"mat-mdc-form-field-label-4\"]/mat-label"
+                ]
+            ],
+            "offsetY": 10.5,
+            "offsetX": 117.09375
+        },
+        {
+            "type": "change",
+            "value": "02191",
+            "selectors": [
+                [
+                    "#mat-input-0"
+                ],
+                [
+                    "xpath///*[@id=\"mat-input-0\"]"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "button.mx-2"
+                ],
+                [
+                    "xpath///*[@id=\"mat-mdc-dialog-0\"]/div/div/ey-mediator-filters/div/mat-dialog-actions/button[1]"
+                ]
+            ],
+            "offsetY": 22,
+            "offsetX": 24.28125
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "td.cdk-column-przypisanyUzytkownik"
+                ],
+                [
+                    "xpath//html/body/ey-mediator-gui-root/ey-mediator-shell-route/ey-mediator-shell-component/div/div/ey-mediator-cases-route/ey-mediator-case-list/div/div[2]/div[1]/table/tbody/tr/td[2]"
+                ]
+            ],
+            "offsetY": 65,
+            "offsetX": 75.265625
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "button.mb-2"
+                ],
+                [
+                    "xpath//html/body/ey-mediator-gui-root/ey-mediator-shell-route/ey-mediator-shell-component/div/div/ey-mediator-credit-decision/ey-mediator-case-data/div/form/ey-mediator-credit-decision/div[1]/div[1]/div[2]/button[1]"
+                ]
+            ],
+            "offsetY": 4.40625,
+            "offsetX": 77
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "form > ey-mediator-credit-decision form > div:nth-of-type(1) > div:nth-of-type(1) span.mat-mdc-button-touch-target"
+                ],
+                [
+                    "xpath//html/body/ey-mediator-gui-root/ey-mediator-shell-route/ey-mediator-shell-component/div/div/ey-mediator-credit-decision/ey-mediator-case-data/div/form/ey-mediator-credit-decision/div[1]/div[1]/div[2]/div/div/div/ey-mediator-decision/div/form/div[1]/div[1]/mat-form-field/div[1]/div/div[3]/mat-datepicker-toggle/button/span[3]"
+                ]
+            ],
+            "offsetY": 26.609375,
+            "offsetX": 30.3125
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "tr:nth-of-type(4) > td:nth-of-type(3) span.mat-calendar-body-cell-content"
+                ],
+                [
+                    "xpath///*[@id=\"mat-datepicker-2\"]/div/mat-month-view/table/tbody/tr[4]/td[3]/button/span[1]"
+                ]
+            ],
+            "offsetY": 24.609375,
+            "offsetX": 30
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "form > div:nth-of-type(2) span"
+                ],
+                [
+                    "xpath///*[@id=\"mat-select-value-19\"]/span"
+                ]
+            ],
+            "offsetY": 16.609375,
+            "offsetX": 110
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#mat-option-130"
+                ],
+                [
+                    "xpath///*[@id=\"mat-option-130\"]"
+                ]
+            ],
+            "offsetY": 43.609375,
+            "offsetX": 80
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "div.w-75 button:nth-of-type(2)"
+                ],
+                [
+                    "xpath//html/body/ey-mediator-gui-root/ey-mediator-shell-route/ey-mediator-shell-component/div/div/ey-mediator-credit-decision/ey-mediator-case-data/div/form/ey-mediator-credit-decision/div[1]/div[1]/div[2]/button[2]"
+                ]
+            ],
+            "offsetY": 19.765625,
+            "offsetX": 18
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "ey-mediator-case-data > div > div button.ey-mediator-process-management-toolbar__next-button > span.mdc-button__label"
+                ],
+                [
+                    "xpath//html/body/ey-mediator-gui-root/ey-mediator-shell-route/ey-mediator-shell-component/div/div/ey-mediator-credit-decision/ey-mediator-case-data/div/div/div/ey-mediator-process-management-toolbar/div/button[2]/span[2]"
+                ]
+            ],
+            "offsetY": 17,
+            "offsetX": 101.734375
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "div.cdk-overlay-container button:nth-of-type(2) > span.mdc-button__label"
+                ],
+                [
+                    "xpath///*[@id=\"mat-mdc-dialog-1\"]/div/div/ey-mediator-process-step-confirmation-dialog/div/mat-dialog-actions/button[2]/span[2]"
+                ]
+            ],
+            "offsetY": 19.5,
+            "offsetX": 21.96875
+        }
+    ]
+}

@@ -1,0 +1,187 @@
+{
+    "title": "Scenariusz 1",
+    "steps": [
+        {
+            "type": "setViewport",
+            "width": 1419,
+            "height": 1365,
+            "deviceScaleFactor": 1,
+            "isMobile": false,
+            "hasTouch": false,
+            "isLandscape": false
+        },
+        {
+            "type": "navigate",
+            "url": "https://mediator.eydev.net/sso/realms/rbi/protocol/openid-connect/auth?client_id=rbi&redirect_uri=https%3A%2F%2Fmediator.eydev.net%2F&state=3942964b-1133-4f96-9f96-fe3a45458b4b&response_mode=fragment&response_type=code&scope=openid&nonce=34196edb-9e1b-41fe-8837-67010041bf88",
+            "assertedEvents": [
+                {
+                    "type": "navigation",
+                    "url": "https://mediator.eydev.net/sso/realms/rbi/protocol/openid-connect/auth?client_id=rbi&redirect_uri=https%3A%2F%2Fmediator.eydev.net%2F&state=3942964b-1133-4f96-9f96-fe3a45458b4b&response_mode=fragment&response_type=code&scope=openid&nonce=34196edb-9e1b-41fe-8837-67010041bf88",
+                    "title": "Zaloguj się do rbi"
+                }
+            ]
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#username"
+                ],
+                [
+                    "xpath///*[@id=\"username\"]"
+                ]
+            ],
+            "offsetY": 33.203125,
+            "offsetX": 91.5
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#username"
+                ],
+                [
+                    "xpath///*[@id=\"username\"]"
+                ]
+            ],
+            "offsetY": 31.203125,
+            "offsetX": 316.5
+        },
+        {
+            "type": "change",
+            "value": "john_",
+            "selectors": [
+                [
+                    "#username"
+                ],
+                [
+                    "xpath///*[@id=\"username\"]"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "-",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "john_superuser_",
+            "selectors": [
+                [
+                    "#username"
+                ],
+                [
+                    "xpath///*[@id=\"username\"]"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "-",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "john_superuser_rbi",
+            "selectors": [
+                [
+                    "#username"
+                ],
+                [
+                    "xpath///*[@id=\"username\"]"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyDown",
+            "target": "main",
+            "key": "Tab"
+        },
+        {
+            "type": "keyUp",
+            "key": "Tab",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "test",
+            "selectors": [
+                [
+                    "#password"
+                ],
+                [
+                    "xpath///*[@id=\"password\"]"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#kc-login"
+                ],
+                [
+                    "xpath///*[@id=\"kc-login\"]"
+                ]
+            ],
+            "offsetY": 13.203125,
+            "offsetX": 57.5,
+            "assertedEvents": [
+                {
+                    "type": "navigation",
+                    "url": "https://mediator.eydev.net/#state=3942964b-1133-4f96-9f96-fe3a45458b4b&session_state=b1b4af47-5b2e-4d9c-8163-8d7f40b1ad97&code=b1db2c07-103e-416a-bf05-095e14be57b3.b1b4af47-5b2e-4d9c-8163-8d7f40b1ad97.811c53fa-d034-486a-bb8e-3f0fe041832d",
+                    "title": "EY Mediator"
+                }
+            ]
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "button:nth-of-type(3)"
+                ],
+                [
+                    "xpath//html/body/ey-mediator-gui-root/ey-mediator-shell-route/ey-mediator-shell-component/div/div/ey-mediator-cases-route/ey-mediator-case-list/div/div[1]/button[3]"
+                ]
+            ],
+            "offsetY": 35,
+            "offsetX": 67.734375
+        },
+        {
+            "type": "change",
+            "value": "C:\\fakepath\\Testowy plik wsadowy 25_01_2024.xlsx",
+            "selectors": [
+                [
+                    "input"
+                ],
+                [
+                    "xpath//html/body/ey-mediator-gui-root/ey-mediator-shell-route/ey-mediator-shell-component/div/div/ey-mediator-cases-route/ey-mediator-case-list/div/div[1]/input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "button.ey-mediator-excel-import-preview-dialog__actions-import-button > span.mdc-button__label"
+                ],
+                [
+                    "xpath///*[@id=\"mat-mdc-dialog-0\"]/div/div/ey-mediator-import-preview-dialog/div/mat-dialog-actions/button[2]/span[2]"
+                ]
+            ],
+            "offsetY": 12.109375,
+            "offsetX": 38.15625
+        }
+    ]
+}
