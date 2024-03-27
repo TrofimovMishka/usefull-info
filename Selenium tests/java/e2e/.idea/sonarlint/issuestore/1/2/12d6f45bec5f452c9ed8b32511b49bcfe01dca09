@@ -1,0 +1,15 @@
+
+\
+java:S1118":Add a private constructor to hide the implicit public one.(ğĞŸ¶ûÿÿÿÿ8«¼ıç1
+™
+java:S1130 "wRemove the declaration of thrown exception 'java.lang.InterruptedException', as it cannot be thrown from method's body.(ÜåéÂşÿÿÿÿ8¯¼ıç1
+G	java:S106!"+Replace this use of System.out by a logger.(‰Óì­8±¼ıç1
+L	java:S1060"+Replace this use of System.out by a logger.(©¢ÎÁüÿÿÿÿ8´¼ıç1
+G	java:S1064"+Replace this use of System.out by a logger.(êÎÏ˜8¶¼ıç1
+G	java:S106K"+Replace this use of System.out by a logger.(İ™Ú8º¼ıç1
+W
+java:S1172N"5Remove this unused method parameter "contractNumber".(¨·„¡úÿÿÿÿ8»¼ıç1
+G	java:S106O"+Replace this use of System.out by a logger.(…Ã»é8»¼ıç1
+L	java:S106X"+Replace this use of System.out by a logger.(™İ°‚üÿÿÿÿ8½¼ıç1
+G	java:S106\"+Replace this use of System.out by a logger.(è©¯÷8Öıç1
+L	java:S106c"+Replace this use of System.out by a logger.(À¿îÎÿÿÿÿÿ8›Ó‘ıç1

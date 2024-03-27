@@ -1,0 +1,7 @@
+
+“
+java:S1130"wRemove the declaration of thrown exception 'java.lang.InterruptedException', as it cannot be thrown from method's body.(º™Ú78øÉ²è1
+]	java:S125"<This block of commented-out lines of code should be removed.(¼ÇÛôşÿÿÿÿ8ÿÉ²è1
+G	java:S106"+Replace this use of System.out by a logger.(™Å8Ú¡µè1
+^
+java:S1128"<Remove this unused import 'org.example.tests.FirstScenario'.(‰†ïşÿÿÿÿ8àĞ¶è1
